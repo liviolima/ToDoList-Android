@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">ToDoList</string>
+    <string name="app_name">To Do List</string>
+
+    <string name="new_task">Nova Tarefa</string>
+
+    <string name="hint_task">Tarefa</string>
+
+    <string name="hint_comment">Notas</string>
+
+    <string name="button_include_newtask">INCLUIR</string>
 </resources>
