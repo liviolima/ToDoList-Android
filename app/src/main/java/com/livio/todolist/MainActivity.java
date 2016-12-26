@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,9 +15,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void GoToNewTaskActivity(View v){
+    public void buttonGoToNewTaskActivity(View v){
         Intent intent = new Intent(MainActivity.this, NewTaskActivity.class);
         startActivity(intent);
+    }
+
+    public void buttonRefreshOnServer(View v){
+        Toast.makeText(this, "Refresh on Server!", Toast.LENGTH_SHORT).show();
     }
 
 }
