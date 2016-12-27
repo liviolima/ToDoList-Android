@@ -7,7 +7,5 @@
 
     <string name="hint_comment">Comentários</string>
 
-    <string name="button_include_newtask">INCLUIR</string>
-
     <string name="button_refresh_onserver">Atualizar no servidor</string>
 </resources>

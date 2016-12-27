@@ -5,11 +5,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="20dp">
-    </LinearLayout>
-
-    <LinearLayout
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:layout_weight="1"
         android:layout_width="match_parent"
@@ -38,8 +34,16 @@
             </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:minHeight="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+
 
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -63,6 +67,21 @@
         </LinearLayout>
 
 
+        <LinearLayout
+            android:minHeight="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:minHeight="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     </LinearLayout>
 
 
@@ -86,12 +105,12 @@
                 android:layout_width="280dp"
                 android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/button_include_newtask"
-                android:text="@string/button_include_newtask"
-                android:layout_width="wrap_content"
+            <ImageButton
+                android:src="@android:drawable/ic_input_add"
+                android:id="@+id/imagebutton_add_newtask"
+                android:onClick="imageButtonAddNewTask"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
         </LinearLayout>
 
         <Button
