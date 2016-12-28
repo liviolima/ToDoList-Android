@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lista de Tarefas</string>
+    <string name="app_name">Tarefas</string>
 
     <string name="new_task">Nova Tarefa</string>
 
