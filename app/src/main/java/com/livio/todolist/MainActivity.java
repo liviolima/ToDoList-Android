@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -73,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void inputDialog(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        //builder.setTitle("Criar nova tarefa");
 
         LayoutInflater li = LayoutInflater.from(this);
         View dialogView = li.inflate(R.layout.to_do_dialog_view, null);
@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
                                 (event.getAction() == KeyEvent.ACTION_DOWN &&
                                         event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
                             dialog.dismiss();
+                            input.setInputType(InputType.TYPE_CLASS_TEXT | ~InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
                             addToDoItem(input.getText().toString());
                             return true;
                         }
@@ -112,9 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void addToDoItem(String toDoItemText) {
         if (toDoItemText == null || toDoItemText.length() == 0) {
-            Toast
-                    .makeText(this, "Insira alguma tarefa!", Toast.LENGTH_SHORT)
-                    .show();
+            Toast.makeText(this, "Insira alguma tarefa!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -139,14 +138,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.about:
                 AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
                 alertDialog.setTitle("Sobre");
-                alertDialog.setMessage("Desenvolvido por Lívio Lima.");
+                alertDialog.setMessage("Desenvolvido por Lívio Lima");
                 alertDialog.show();
                 break;
         }
         return true;
     }
-
-
-
 
 }

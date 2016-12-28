@@ -13,6 +13,7 @@ public class ToDoItem extends RealmObject {
     private long id;
 
     private String description;
+    private boolean done;
 
     public long getId() {
         return id;
@@ -28,5 +29,13 @@ public class ToDoItem extends RealmObject {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean getDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
     }
 }
