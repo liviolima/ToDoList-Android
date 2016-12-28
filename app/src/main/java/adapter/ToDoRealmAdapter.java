@@ -105,10 +105,17 @@ public class ToDoRealmAdapter extends RealmBasedRecyclerViewAdapter<ToDoItem, To
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
-    public void onBindRealmViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindRealmViewHolder(final ViewHolder viewHolder, final int position) {
         final ToDoItem toDoItem = realmResults.get(position);
         viewHolder.checkBoxDone.setChecked(toDoItem.getDone());
         viewHolder.todoTextView.setText(toDoItem.getDescription());
+        if (viewHolder.checkBoxDone.isChecked()) {
+            viewHolder.todoTextView.setPaintFlags(viewHolder.todoTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        } else {
+            viewHolder.todoTextView.setPaintFlags(viewHolder.todoTextView.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+        }
     }
+
+
 
 }
