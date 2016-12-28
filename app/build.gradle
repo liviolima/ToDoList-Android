@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 25
@@ -27,6 +28,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
 
     compile 'com.github.thorbenprimke:realm-recyclerview:0.9.25'
+    compile "io.realm:realm-annotations:0.87.4"
+    compile 'com.android.support:design:25.1.0'
 
     testCompile 'junit:junit:4.12'
 

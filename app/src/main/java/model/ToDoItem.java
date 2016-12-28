@@ -2,12 +2,13 @@ package model;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.RealmClass;
 
 /**
  * Created by livio on 27/12/16.
  */
-
-public class ToDoITem extends RealmObject {
+@RealmClass
+public class ToDoItem extends RealmObject {
     @PrimaryKey
     private long id;
 

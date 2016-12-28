@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">To Do List</string>
+    <string name="app_name">Lista de Tarefas</string>
 
     <string name="new_task">Nova Tarefa</string>
 
-    <string name="hint_task">Tarefa</string>
+    <string name="what_do_you_have_to_do">O que você precisa fazer?</string>
+    
+    
 
-    <string name="hint_comment">Comentários</string>
 
-    <string name="button_refresh_onserver">Atualizar no servidor</string>
+
 </resources>
